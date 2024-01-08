@@ -10,7 +10,7 @@ api_hash = 'bd3e85a7aae40566f2fa8804d200d6d0'
 
 
 @app.get("/api/{sess}/1/{user}/{message}/")
-async def send_message(sess: str, user: str, message: str):  # إضافة user و message كمتغيرات للدالة
+async def send_message(sess: str, user: str, message: str):
 
     async with TelegramClient(StringSession(sess), api_id, api_hash) as client:
         await client.start()
